@@ -1,5 +1,11 @@
 Revision history for Perl-Stripper
 
+0.02    2012-09-14 (SHARYANTO)
+
+        No functional changes. Add todo item and FAQ.
+
+
 0.01    2012-09-14 (SHARYANTO)
 
-        First release.
+        First release. No tests yet.
+
