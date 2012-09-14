@@ -264,6 +264,31 @@ Like:
 
 =head1 FAQ
 
+=head2 How about obfuscating by encoding Perl code?
+
+For example, changing:
+
+ foo();
+ bar();
+
+into:
+
+ $src = base64_decode(...); # optionally multiple rounds
+ eval $src;
+
+This does not really remove meaningful parts of a source code, so I'm not very
+interested in this. You can send a patch if you want.
+
+=head2 How about changing string into hexadecimal characters? How about ...?
+
+Other examples would be adding extra parentheses to expressions, changing
+constant numbers into mathematical expressions.
+
+Again, this does not I<remove> meaningful parts of a source code (instead, they
+just transform stuffs). The effect can be reversed trivially using L<Perl::Tidy>
+or L<B::Deparse>. So I'm not very interested in doing this, but you can send a
+patch if you want.
+
 
 =head1 SEE ALSO
 
