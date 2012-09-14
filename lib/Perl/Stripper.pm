@@ -273,8 +273,13 @@ reduce the usefulness of the deployed source code by removing information such
 as comments and POD (documentation), or by mangling subroutine/variable names
 (removing meaningful original subroutine/variable names).
 
-Discussing hiding/protecting source code is beyond the scope of this module's
-documentation. Please consult elsewhere.
+For compressing source code (reducing source code size), you can try
+L<Perl::Squish> or L<Perl::Strip>.
+
+=head2 But isn't hiding/protecting source code immoral/unethical/ungrateful?
+
+Discussing hiding/protecting source code in general is really beyond the scope
+of this module's documentation. Please consult elsewhere.
 
 =head2 How about obfuscating by encoding Perl code?
 
