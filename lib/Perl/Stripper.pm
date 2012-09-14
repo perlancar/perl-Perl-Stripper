@@ -251,6 +251,14 @@ Perl's predefined variables like C<@ARGV>, C<%ENV>, and so on.
 
 =item * Option to remove comments and whitespace in /x regexes
 
+=item * Option to remove certain code blocks
+
+Like:
+
+ if ($DEBUG) { ... }
+ if ($PRODUCTION) { ... }
+ assert(...)
+
 =back
 
 
