@@ -162,7 +162,7 @@ This module uses L<Log::Any> logging framework.
 
 =head2 maintain_linum => BOOL (default: 1)
 
-If set to true, stripper will try to maintain line numbers so it does not change
+If set to true, stripper will try to maintain line numbers so they do not change
 between the unstripped and the stripped version. This is useful for debugging.
 
 Respected by other settings.
@@ -294,7 +294,7 @@ into:
  eval $src;
 
 This does not really remove significant (meaningful) parts of a source code, so
-I'm not very interested in this approach. You can send a patch if you want.
+I am not very interested in this approach. You can send a patch if you want.
 
 =head2 How about changing string into hexadecimal characters? How about ...?
 
@@ -303,7 +303,7 @@ expressions, changing constant numbers into mathematical expressions.
 
 Again, this does not I<remove> significant (meaningful) parts of a source code
 (instead, they just transform stuffs). The effect can be reversed trivially
-using L<Perl::Tidy> or L<B::Deparse>. So I'm not very interested in doing this,
+using L<Perl::Tidy> or L<B::Deparse>. So I am not very interested in doing this,
 but you can send a patch if you want.
 
 
