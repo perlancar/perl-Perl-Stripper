@@ -169,7 +169,8 @@ Respected by other settings.
 
 =head2 strip_ws => BOOL (default: 1)
 
-Strip extra whitespace. Under C<maintain_linum>, will not strip newlines.
+Strip extra whitespace, like indentation or padding. Under C<maintain_linum>,
+will not strip newlines.
 
 Not yet implemented.
 
