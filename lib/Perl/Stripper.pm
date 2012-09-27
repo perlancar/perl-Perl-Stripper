@@ -59,7 +59,7 @@ sub strip {
             my ($top, $el) = @_;
 
             if ($self->strip_comment && $el->isa('PPI::Token::Comment')) {
-                # don't strip she-bang
+                # don't strip shebang line
                 if ($el->content =~ /^#!/) {
                     my $loc = $el->location;
                     return if $loc->[0] == 1 && $loc->[1] == 1;
@@ -184,7 +184,7 @@ Not yet implemented.
 If set to true, will strip comments. Under C<maintain_linum> will replace
 comment lines with blank lines.
 
-She-bang line (e.g. C<#!/usr/bin/perl>, located at the beginning of script) will
+Shebang line (e.g. C<#!/usr/bin/perl>, located at the beginning of script) will
 not be stripped.
 
 Can also be set to a coderef. Code will be given the PPI comment token object
