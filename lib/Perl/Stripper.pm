@@ -1,13 +1,11 @@
 package Perl::Stripper;
 
 use 5.010001;
-use strict;
-use warnings;
-use experimental 'smartmatch';
 use Log::Any qw($log);
 
 use PPI;
 use Moo;
+use experimental 'smartmatch';
 
 # VERSION
 
