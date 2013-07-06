@@ -1,5 +1,11 @@
 Revision history for Perl-Stripper
 
+0.06    2013-07-06 (SHARYANTO)
+
+        No functional change. Second attempt (always forgets, must be after 'use
+        Moo').
+
+
 0.05    2013-07-05 (SHARYANTO)
 
         No functional change. Add "use experimental 'smartmatch'" for 5.18+.
