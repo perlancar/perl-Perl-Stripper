@@ -4,7 +4,7 @@ use 5.010;
 use strict;
 use warnings;
 
-use File::Slurp;
+use File::Slurp::Tiny qw(read_file);
 use Perl::Stripper;
 use Test::More 0.98;
 
