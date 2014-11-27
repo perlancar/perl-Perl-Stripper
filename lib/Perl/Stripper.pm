@@ -157,10 +157,6 @@ sub strip {
 This module is yet another PPI-based Perl source code stripper. Its focus is on
 costumization and stripping significant information from source code.
 
-This module uses L<Moo> object system.
-
-This module uses L<Log::Any> logging framework.
-
 
 =head1 ATTRIBUTES
 
