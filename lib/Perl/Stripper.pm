@@ -1,13 +1,14 @@
 package Perl::Stripper;
 
+# DATE
+# VERSION
+
 use 5.010001;
 use Log::Any qw($log);
 
 use PPI;
 use Moo;
 use experimental 'smartmatch';
-
-# VERSION
 
 has maintain_linum      => (is => 'rw', default => sub { 1 });
 has strip_comment       => (is => 'rw', default => sub { 1 });
@@ -228,38 +229,6 @@ Constructor.
 =head2 $stripper->strip($perl) => STR
 
 Strip Perl source code. Return the stripped source code.
-
-
-=head1 TODO/IDEAS
-
-=over 4
-
-=item * Option to mangle subroutine names
-
-With exclude and mangling options (dictionary, name mangler sub).
-
-=item * Option to mangle name of lexical variables
-
-With exclude and mangling options (dictionary, name mangler sub).
-
-=item * Option to mangle name of global variables
-
-With exclude and mangling options (dictionary, name mangler sub). And exclude
-Perl's predefined variables like C<@ARGV>, C<%ENV>, and so on.
-
-=item * Option to mangle labels
-
-=item * Option to remove comments and whitespace in /x regexes
-
-=item * Option to remove certain code blocks
-
-Like:
-
- if ($DEBUG) { ... }
- if ($PRODUCTION) { ... }
- assert(...)
-
-=back
 
 
 =head1 FAQ
