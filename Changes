@@ -1,5 +1,12 @@
 Revision history for Perl-Stripper
 
+0.08    2015-01-03 (PERLANCAR)
+
+	- No functional changes.
+
+	- Rebuild (Generate TODO.md).
+
+
 0.07    2014-05-17 (SHARYANTO)
 
         - No functional changes.
