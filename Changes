@@ -1,5 +1,12 @@
 Revision history for Perl-Stripper
 
+0.09    2015-08-18 (PERLANCAR)
+
+	- No functional changes.
+
+	- Switch from Log::Any to Log::Any::IfLOG.
+
+
 0.08    2015-01-03 (PERLANCAR)
 
 	- No functional changes.
