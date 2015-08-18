@@ -11,7 +11,7 @@ our $our = 1;
 my $lexical = 2;
 $global = 3;
 
-sub foo {
+sub foo { 
     my $lexical = 4;
     local $global;
     $global2 = 5;
@@ -29,3 +29,13 @@ stripped");
         $log->warn("blah ...");
     }
 }
+
+
+
+
+
+
+
+
+
+
