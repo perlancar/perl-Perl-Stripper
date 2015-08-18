@@ -4,7 +4,7 @@ package Perl::Stripper;
 # VERSION
 
 use 5.010001;
-use Log::Any qw($log);
+use Log::Any::IfLOG qw($log);
 
 use PPI;
 use Moo;

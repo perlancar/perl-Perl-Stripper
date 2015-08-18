@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-use Log::Any qw($log);
+use Log::Any::IfLOG qw($log);
 use vars qw($global $global3);
 
 # line comment
