@@ -156,7 +156,7 @@ sub strip {
 =head1 DESCRIPTION
 
 This module is yet another PPI-based Perl source code stripper. Its focus is on
-costumization and stripping significant information from source code.
+costumization and stripping meaningful information from source code.
 
 
 =head1 ATTRIBUTES
@@ -264,18 +264,18 @@ into:
  $src = base64_decode(...); # optionally multiple rounds
  eval $src;
 
-This does not really remove significant (meaningful) parts of a source code, so
-I am not very interested in this approach. You can send a patch if you want.
+This does not really remove meaningful parts of a source code, so I am not very
+interested in this approach. You can send a patch if you want.
 
 =head2 How about changing string into hexadecimal characters? How about ...?
 
 Other examples similar in spirit would be adding extra parentheses to
 expressions, changing constant numbers into mathematical expressions.
 
-Again, this does not I<remove> significant (meaningful) parts of a source code
-(instead, they just transform stuffs). The effect can be reversed trivially
-using L<Perl::Tidy> or L<B::Deparse>. So I am not very interested in doing this,
-but you can send a patch if you want.
+Again, this does not I<remove> meaningful parts of a source code (instead, they
+just transform stuffs). The effect can be reversed trivially using L<Perl::Tidy>
+or L<B::Deparse>. So I am not very interested in doing this, but you can send a
+patch if you want.
 
 
 =head1 SEE ALSO
