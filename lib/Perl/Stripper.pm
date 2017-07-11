@@ -95,8 +95,15 @@ sub strip {
                         }
                     }
                 }
+                if ($el->isa('PPI::Statement')) {
+                    # matching 'log_trace(...);'
+                    my $c0 = $el->child(0);
+                    if (grep { $c0->content eq "log_$_" } @ll) {
+                        $match++;
+                    }
+                }
                 if ($el->isa('PPI::Statement::Compound')) {
-                    # matching 'if ($log->is_trace) { ... }'
+                    # matching 'if ($log->is_trace) { ... }' or 'if (log_is_trace()) { ... }'
                     my $c0 = $el->child(0);
                     if ($c0->content eq 'if') {
                         my $cond = $c0->snext_sibling;
@@ -113,6 +120,8 @@ sub strip {
                                             $match++;
                                         }
                                     }
+                                } elsif (grep {$c0->content eq "log_is_$_"} @ll) {
+                                    $match++;
                                 }
                             }
                         }
@@ -191,17 +200,23 @@ replace comment with gibberish, etc.
 =head2 strip_log => BOOL (default: 1)
 
 If set to true, will strip log statements. Useful for removing debugging
-information. Currently L<Log::Any>-specific and only looks for the default
-logger C<$log>. These will be stripped:
+information. Currently supports L<Log::Any> and L<Log::ger> and only looks for
+the following statements:
 
- $log->METHOD(...);
- $log->METHODf(...);
- if ($log->is_METHOD) { ... }
+ $log->LEVEL(...);
+ $log->LEVELf(...);
+ log_LEVEL(...);
+ if ($log->is_LEVEL) { ... }
+ if (log_is_LEVEL()) { ... }
 
 Not all methods are stripped. See C<stripped_log_levels>.
 
 Can also be set to a coderef. Code will be given the L<PPI::Statement> object
 and expected to modify it.
+
+These are currently not stripped:
+
+ if (something && $log->is_LEVEL) { ... }
 
 =head2 stripped_log_levels => ARRAY_OF_STR (default: ['debug', 'trace'])
 
